@@ -634,11 +634,11 @@ func (ftp *FTP) List(path string) (files []string, err error) {
 			return
 		}
 
-		if !strings.HasPrefix(line, StatusFileOK) {
-			// Really list is not working here
-			err = errors.New(line)
-			return
-		}
+// 		if !strings.HasPrefix(line, StatusFileOK) {
+// 			// Really list is not working here
+// 			err = errors.New(line)
+// 			return
+// 		}
 	}
 
 	reader := bufio.NewReader(pconn)
