@@ -454,8 +454,8 @@ func (ftp *FTP) Stor(path string, r io.Reader) (err error) {
 	}
 	defer pconn.Close()
 
-	var line string
-	if line, err = ftp.receive(); err != nil {
+	//var line string
+	if _, err = ftp.receive(); err != nil {
 		return
 	}
 
@@ -469,7 +469,7 @@ func (ftp *FTP) Stor(path string, r io.Reader) (err error) {
 	}
 	pconn.Close()
 
-	if line, err = ftp.receive(); err != nil {
+	if _, err = ftp.receive(); err != nil {
 		return
 	}
 
