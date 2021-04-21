@@ -473,10 +473,10 @@ func (ftp *FTP) Stor(path string, r io.Reader) (err error) {
 		return
 	}
 
-	if !strings.HasPrefix(line, StatusClosingDataConnection) {
-		err = errors.New(line)
-		return
-	}
+// 	if !strings.HasPrefix(line, StatusClosingDataConnection) {
+// 		err = errors.New(line)
+// 		return
+// 	}
 
 	return
 
